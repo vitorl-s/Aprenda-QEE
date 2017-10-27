@@ -11,9 +11,6 @@ public class Fluxo_Pot_Fund extends JInternalFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private JTextField txtAmplitude;
-	private JTextField textField;
-	private JTextField textField_1;
 
 	/**
 	 * Launch the application.
@@ -35,43 +32,36 @@ public class Fluxo_Pot_Fund extends JInternalFrame {
 	 * Create the frame.
 	 */
 	public Fluxo_Pot_Fund() {
-		setBounds(100, 100, 307, 481);
+		setBounds(100, 100, 917, 526);
 		getContentPane().setLayout(null);
 		
-		JLabel lblInformeOsDados = new JLabel("<HTML>Informe os dados<BR>nos campos abaixo <BR> e depois clique no botão</HTML>");
-		lblInformeOsDados.setBounds(54, 12, 176, 65);
+		JLabel lblInformeOsDados = new JLabel("<HTML>Informe os dados<BR>nos campos abaixo </HTML>");
+		lblInformeOsDados.setBounds(705, 22, 135, 30);
 		getContentPane().add(lblInformeOsDados);
 		
-		txtAmplitude = new JTextField();
-		txtAmplitude.setBounds(55, 135, 165, 25);
-		getContentPane().add(txtAmplitude);
-		txtAmplitude.setColumns(10);
-		
-		textField = new JTextField();
-		textField.setColumns(10);
-		textField.setBounds(55, 238, 165, 25);
-		getContentPane().add(textField);
-		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(55, 326, 165, 25);
-		getContentPane().add(textField_1);
-		
 		JLabel lblAmplitude = new JLabel("Amplitude:");
-		lblAmplitude.setBounds(55, 108, 98, 25);
+		lblAmplitude.setBounds(705, 76, 76, 15);
 		getContentPane().add(lblAmplitude);
 		
 		JLabel lblAnguloDaFase = new JLabel("Ângulo fase de tensão:");
-		lblAnguloDaFase.setBounds(54, 202, 165, 25);
+		lblAnguloDaFase.setBounds(705, 137, 165, 25);
 		getContentPane().add(lblAnguloDaFase);
 		
 		JLabel lblCorrente = new JLabel("Corrente:");
-		lblCorrente.setBounds(55, 297, 98, 25);
+		lblCorrente.setBounds(705, 200, 98, 25);
 		getContentPane().add(lblCorrente);
 		
-		JButton btnOk = new JButton("Ok");
-		btnOk.setBounds(80, 400, 117, 25);
-		getContentPane().add(btnOk);
+		JSpinner spinner = new JSpinner();
+		spinner.setBounds(705, 103, 43, 20);
+		getContentPane().add(spinner);
+		
+		JSpinner spinner_1 = new JSpinner();
+		spinner_1.setBounds(705, 162, 43, 20);
+		getContentPane().add(spinner_1);
+		
+		JSpinner spinner_2 = new JSpinner();
+		spinner_2.setBounds(705, 224, 43, 20);
+		getContentPane().add(spinner_2);
 
 	}
 }
