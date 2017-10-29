@@ -3,9 +3,9 @@ package View;
 import java.awt.EventQueue;
 
 import javax.swing.JInternalFrame;
-import javax.swing.JRadioButton;
+
 import javax.swing.JLabel;
-import javax.swing.JSeparator;
+
 import javax.swing.JSpinner;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;

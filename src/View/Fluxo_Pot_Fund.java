@@ -1,37 +1,34 @@
 package View;
 
 import java.awt.EventQueue;
+import java.io.IOException;
 
-import javax.swing.JInternalFrame;
 import javax.swing.*;
 
 
 public class Fluxo_Pot_Fund extends JInternalFrame {
 	/**
+	 * public Cadastro(JFrame telaInicial) throws IOException{
+	
+	criaPainelCadastros(telaInicial);
+}
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	public Fluxo_Pot_Fund(JInternalFrame simulacao) throws IOException{
+		CriaTela(simulacao);
+	}
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Fluxo_Pot_Fund frame = new Fluxo_Pot_Fund();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
 
 	/**
 	 * Create the frame.
+	 * @return 
 	 */
-	public Fluxo_Pot_Fund() {
+	public void CriaTela(JInternalFrame simulacao) throws IOException{
 		setBounds(100, 100, 917, 526);
 		getContentPane().setLayout(null);
 		
@@ -44,24 +41,24 @@ public class Fluxo_Pot_Fund extends JInternalFrame {
 		getContentPane().add(lblAmplitude);
 		
 		JLabel lblAnguloDaFase = new JLabel("Ângulo fase de tensão:");
-		lblAnguloDaFase.setBounds(705, 137, 165, 25);
+		lblAnguloDaFase.setBounds(705, 137, 165, 15);
 		getContentPane().add(lblAnguloDaFase);
 		
 		JLabel lblCorrente = new JLabel("Corrente:");
-		lblCorrente.setBounds(705, 200, 98, 25);
+		lblCorrente.setBounds(705, 200, 98, 15);
 		getContentPane().add(lblCorrente);
 		
-		JSpinner spinner = new JSpinner();
-		spinner.setBounds(705, 103, 43, 20);
-		getContentPane().add(spinner);
+		JSpinner contador1 = new JSpinner();
+		contador1.setBounds(705, 103, 43, 20);
+		getContentPane().add(contador1);
 		
-		JSpinner spinner_1 = new JSpinner();
-		spinner_1.setBounds(705, 162, 43, 20);
-		getContentPane().add(spinner_1);
+		JSpinner contador2 = new JSpinner();
+		contador2.setBounds(705, 162, 43, 20);
+		getContentPane().add(contador2);
 		
-		JSpinner spinner_2 = new JSpinner();
-		spinner_2.setBounds(705, 224, 43, 20);
-		getContentPane().add(spinner_2);
+		JSpinner contador3 = new JSpinner();
+		contador3.setBounds(705, 224, 43, 20);
+		getContentPane().add(contador3);
 
 	}
 }
