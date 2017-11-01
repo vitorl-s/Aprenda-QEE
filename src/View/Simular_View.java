@@ -4,11 +4,14 @@ import java.awt.EventQueue;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+
+import Controller.Simular_Controller;
+
+
 
 public class Simular_View extends JFrame {
 
@@ -17,6 +20,8 @@ public class Simular_View extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
+	private JInternalFrame simulacao;
+	
 
 	/**
 	 * Launch the application.
@@ -55,10 +60,7 @@ public class Simular_View extends JFrame {
 		contentPane.add(lblSelecione);
 		
 		JButton btnFluxoPotFund = new JButton("Fluxo de Potência Fundamental");
-		btnFluxoPotFund.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		btnFluxoPotFund.addActionListener(new Simular_Controller(simulacao));
 		btnFluxoPotFund.setBounds(152, 207, 256, 46);
 		contentPane.add(btnFluxoPotFund);
 		
