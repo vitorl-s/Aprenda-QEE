@@ -5,7 +5,7 @@ package View;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import Model.calculosFluxoPotFund;
 import javax.swing.*;
 import java.awt.GridLayout;
 import java.awt.FlowLayout;
@@ -35,41 +35,9 @@ public class Fluxo_Pot_Fund extends JFrame {
 		setBounds(100, 100, 917, 526);
 		getContentPane().setLayout(null);
 		
-		JLabel lblAmplitude = new JLabel("Amplitude:");
-		lblAmplitude.setBounds(637, 22, 76, 15);
-		getContentPane().add(lblAmplitude);
-		
-		JLabel lblAnguloDaFase = new JLabel("Ângulo de fase");
-		lblAnguloDaFase.setBounds(761, 22, 106, 15);
-		getContentPane().add(lblAnguloDaFase);
-		
-		JLabel lblCorrente = new JLabel("Amplitude:");
-		lblCorrente.setBounds(637, 201, 76, 15);
-		getContentPane().add(lblCorrente);
-		
-		JSpinner contador1 = new JSpinner();
-		contador1.setBounds(647, 49, 43, 20);
-		getContentPane().add(contador1);
-		
-		JSpinner contador2 = new JSpinner();
-		contador2.setBounds(771, 49, 43, 20);
-		getContentPane().add(contador2);
-		
-		JSpinner contador3 = new JSpinner();
-		contador3.setBounds(647, 228, 43, 20);
-		getContentPane().add(contador3);
-		
 		JLabel lblTenso = new JLabel("Tensão");
 		lblTenso.setBounds(12, 16, 52, 15);
 		getContentPane().add(lblTenso);
-		
-		JLabel label = new JLabel("Ângulo de fase");
-		label.setBounds(761, 201, 106, 15);
-		getContentPane().add(label);
-		
-		JSpinner spinner = new JSpinner();
-		spinner.setBounds(771, 228, 43, 20);
-		getContentPane().add(spinner);
 		
 		JLabel lblCorrente_1 = new JLabel("Corrente");
 		lblCorrente_1.setBounds(12, 193, 63, 15);
@@ -85,12 +53,55 @@ public class Fluxo_Pot_Fund extends JFrame {
 		
 		List<Double> scores = new ArrayList<>();
 		for(double i = 1 ; i < 90 ; i ++) {
-			scores.add(15*Math.cos(Math.toDegrees(8*i)+Math.toDegrees(45)));
+			double j = calculosFluxoPotFund.calculaOndaTensao();
+			scores.add();
 		}
 		panel.setLayout(new GridLayout(0, 1, 0, 0));
 		
 		GraphPanel g1 = new GraphPanel(scores);
 		panel.add(g1);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBounds(582, 211, 323, 105);
+		getContentPane().add(panel_1);
+		panel_1.setLayout(null);
+		
+		JSpinner contador3 = new JSpinner();
+		contador3.setBounds(213, 34, 43, 20);
+		panel_1.add(contador3);
+		
+		JSpinner contador4 = new JSpinner();
+		contador4.setBounds(32, 34, 43, 20);
+		panel_1.add(contador4);
+		
+		JLabel lblCorrente = new JLabel("Amplitude:");
+		lblCorrente.setBounds(205, 7, 106, 15);
+		panel_1.add(lblCorrente);
+		
+		JLabel label = new JLabel("Ângulo de fase");
+		label.setBounds(10, 7, 106, 15);
+		panel_1.add(label);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setBounds(582, 42, 323, 122);
+		getContentPane().add(panel_2);
+		panel_2.setLayout(null);
+		
+		JLabel lblAnguloDaFase = new JLabel("Ângulo de fase");
+		lblAnguloDaFase.setBounds(12, 12, 106, 15);
+		panel_2.add(lblAnguloDaFase);
+		
+		JSpinner contador1 = new JSpinner();
+		contador1.setBounds(212, 39, 43, 20);
+		panel_2.add(contador1);
+		
+		JSpinner contador2 = new JSpinner();
+		contador2.setBounds(22, 39, 43, 20);
+		panel_2.add(contador2);
+		
+		JLabel lblAmplitude = new JLabel("Amplitude:");
+		lblAmplitude.setBounds(202, 12, 106, 15);
+		panel_2.add(lblAmplitude);
 		
 		
 		
