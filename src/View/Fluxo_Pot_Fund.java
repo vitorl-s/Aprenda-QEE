@@ -2,33 +2,29 @@ package View;
 
 
 
-import java.awt.EventQueue;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.*;
+import java.awt.GridLayout;
+import java.awt.FlowLayout;
 
 
-public class Fluxo_Pot_Fund extends JInternalFrame {
+public class Fluxo_Pot_Fund extends JFrame {
 	/**
 	 * 
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+	JFrame frame;
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Fluxo_Pot_Fund simulacao = new Fluxo_Pot_Fund();
-					
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+		Fluxo_Pot_Fund frame = new Fluxo_Pot_Fund();
+		frame.setVisible(true);
 	}
 
 	/**
@@ -82,6 +78,22 @@ public class Fluxo_Pot_Fund extends JInternalFrame {
 		JSeparator separator = new JSeparator();
 		separator.setBounds(12, 187, 883, 2);
 		getContentPane().add(separator);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(13, 17, 460, 210);
+		getContentPane().add(panel);
+		
+		List<Double> scores = new ArrayList<>();
+		for(double i = 1 ; i < 90 ; i ++) {
+			scores.add(15*Math.cos(Math.toDegrees(8*i)+Math.toDegrees(45)));
+		}
+		panel.setLayout(new GridLayout(0, 1, 0, 0));
+		
+		GraphPanel g1 = new GraphPanel(scores);
+		panel.add(g1);
+		
+		
+		
 
 	}
 }

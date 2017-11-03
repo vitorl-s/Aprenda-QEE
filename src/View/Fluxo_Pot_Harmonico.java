@@ -1,19 +1,24 @@
 package View;
 
 import java.awt.EventQueue;
+import java.awt.GridLayout;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JSpinner;
 import javax.swing.JSeparator;
+import javax.swing.JPanel;
 
-public class Fluxo_Pot_Harmonico extends JInternalFrame {
+public class Fluxo_Pot_Harmonico extends JFrame {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+	private JPanel painelGraficoTensao;
 	/**
 	 * Launch the application.
 	 */
@@ -34,6 +39,7 @@ public class Fluxo_Pot_Harmonico extends JInternalFrame {
 	 * Create the frame.
 	 */
 	public Fluxo_Pot_Harmonico() {
+		setTitle("Simulacao Fluxo Potencia Harmonico");
 		setBounds(100, 100, 900, 500);
 		getContentPane().setLayout(null);
 		
@@ -73,21 +79,34 @@ public class Fluxo_Pot_Harmonico extends JInternalFrame {
 		lblTenso.setBounds(12, 12, 70, 15);
 		getContentPane().add(lblTenso);
 		
-		JLabel lblAmplitude = new JLabel("Amplitude");
-		lblAmplitude.setBounds(793, 12, 71, 15);
-		getContentPane().add(lblAmplitude);
+		JPanel panel = new JPanel();
+		panel.setBounds(620, 25, 268, 116);
+		getContentPane().add(panel);
 		
 		JLabel lblnguloDeFase = new JLabel("Ângulo de fase");
-		lblnguloDeFase.setBounds(661, 12, 106, 15);
-		getContentPane().add(lblnguloDeFase);
+		panel.add(lblnguloDeFase);
 		
-		JSpinner spinner_3 = new JSpinner();
-		spinner_3.setBounds(671, 39, 39, 20);
-		getContentPane().add(spinner_3);
+		JLabel lblAmplitude = new JLabel("Amplitude");
+		panel.add(lblAmplitude);
 		
 		JSpinner spinner_4 = new JSpinner();
-		spinner_4.setBounds(786, 39, 39, 20);
-		getContentPane().add(spinner_4);
+		panel.add(spinner_4);
+		
+		JSpinner spinner_3 = new JSpinner();
+		panel.add(spinner_3);
+		
+		JPanel painelGraficoTensao = new JPanel();
+		painelGraficoTensao.setBounds(13, 17, 460, 210);
+		getContentPane().add(painelGraficoTensao);
+		
+		List<Double> scores = new ArrayList<>();
+		for(double i = 1 ; i < 90 ; i ++) {
+			scores.add(15*Math.cos(Math.toDegrees(8*i)+Math.toDegrees(45)));
+		}
+		painelGraficoTensao.setLayout(new GridLayout(0, 1, 0, 0));
+		
+		GraphPanel g1 = new GraphPanel(scores);
+		painelGraficoTensao.add(g1);
 
 	}
 }

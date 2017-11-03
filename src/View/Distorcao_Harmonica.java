@@ -1,16 +1,20 @@
 package View;
 
 import java.awt.EventQueue;
+import java.awt.GridLayout;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JInternalFrame;
 
 import javax.swing.JLabel;
-
+import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.JComboBox;
+import javax.swing.JFrame;
 import javax.swing.DefaultComboBoxModel;
 
-public class Distorcao_Harmonica extends JInternalFrame {
+public class Distorcao_Harmonica extends JFrame {
 
 	/**
 	 * 
@@ -72,6 +76,19 @@ public class Distorcao_Harmonica extends JInternalFrame {
 		JSpinner spinner_3 = new JSpinner();
 		spinner_3.setBounds(761, 139, 35, 24);
 		getContentPane().add(spinner_3);
+		
+		JPanel painelGraficoTensao = new JPanel();
+		painelGraficoTensao.setBounds(13, 17, 460, 210);
+		getContentPane().add(painelGraficoTensao);
+		
+		List<Double> scores = new ArrayList<>();
+		for(double i = 1 ; i < 90 ; i ++) {
+			scores.add(15*Math.cos(Math.toDegrees(8*i)+Math.toDegrees(45)));
+		}
+		painelGraficoTensao.setLayout(new GridLayout(0, 1, 0, 0));
+		
+		GraphPanel g1 = new GraphPanel(scores);
+		painelGraficoTensao.add(g1);
 
 	}
 }

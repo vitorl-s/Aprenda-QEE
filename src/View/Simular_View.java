@@ -1,15 +1,17 @@
 package View;
 
-import java.awt.EventQueue;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JInternalFrame;
+
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import Controller.Simular_Controller;
+import Controller.AcaoBotaoSimulacao1;
+import Controller.AcaoBotaoSimulacao2;
+import Controller.AcaoBotaoSimulacao3;
+
+
 
 
 
@@ -20,23 +22,15 @@ public class Simular_View extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JInternalFrame simulacao;
+	
 	
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Simular_View frame = new Simular_View();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+		Simular_View frame = new Simular_View();
+		frame.setVisible(true);
 	}
 
 	/**
@@ -60,15 +54,17 @@ public class Simular_View extends JFrame {
 		contentPane.add(lblSelecione);
 		
 		JButton btnFluxoPotFund = new JButton("Fluxo de Potência Fundamental");
-		btnFluxoPotFund.addActionListener(new Simular_Controller(simulacao));
+		btnFluxoPotFund.addActionListener(new AcaoBotaoSimulacao1());
 		btnFluxoPotFund.setBounds(152, 207, 256, 46);
 		contentPane.add(btnFluxoPotFund);
 		
 		JButton btnDistorHarm = new JButton("Distorção Harmônica");
+		btnDistorHarm.addActionListener(new AcaoBotaoSimulacao2());
 		btnDistorHarm.setBounds(152, 275, 256, 46);
 		contentPane.add(btnDistorHarm);
 		
 		JButton btnFluxoPotHarm = new JButton("Fluxo de potência Harmônico");
+		btnFluxoPotHarm.addActionListener(new AcaoBotaoSimulacao3());
 		btnFluxoPotHarm.setBounds(152, 343, 256, 46);
 		contentPane.add(btnFluxoPotHarm);
 		
