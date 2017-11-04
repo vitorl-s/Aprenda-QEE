@@ -20,6 +20,10 @@ public class Fluxo_Pot_Fund extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 	JFrame frame;
+	private JTextField tfPotenciaAtiva;
+	private JTextField tfPotenciaReativa;
+	private JTextField tfPotenciaAparente;
+	private JTextField tfFatorPotencia;
 	
 
 	/**
@@ -35,7 +39,7 @@ public class Fluxo_Pot_Fund extends JFrame {
 	 * @return 
 	 */
 	public Fluxo_Pot_Fund() {
-		setBounds(100, 100, 917, 526);
+		setBounds(100, 100, 1280, 720);
 		getContentPane().setLayout(null);
 		
 		JSpinner contador1 = new JSpinner();
@@ -54,12 +58,12 @@ public class Fluxo_Pot_Fund extends JFrame {
 		getContentPane().add(separator);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(13, 17, 480, 220);
+		panel.setBounds(13, 17, 557, 151);
 		getContentPane().add(panel);
 		
 		List<Double> scores = new ArrayList<>();
 		
-		for(double i = 1 ; i < 90 ; i ++) {
+		for(double i = 1 ; i < 90 ; i++) {
 			scores.add(calculosFluxoPotFund.CalculaOndaTensao(12, i , 2.2));
 			
 		}
@@ -68,6 +72,38 @@ public class Fluxo_Pot_Fund extends JFrame {
 		
 		GraphPanel g1 = new GraphPanel(scores);
 		panel.add(g1);
+		
+		JPanel panel2 = new JPanel();
+		panel2.setBounds(12, 243, 558, 151);
+		getContentPane().add(panel2);
+		
+		List<Double> scores2 = new ArrayList<>();
+		
+		for(double i = 1 ; i < 90 ; i ++) {
+			scores2.add(calculosFluxoPotFund.CalculaOndaTensao(12, i , 2.2));
+			
+		}
+		
+		panel2.setLayout(new GridLayout(0, 1, 0, 0));
+		
+		GraphPanel g2 = new GraphPanel(scores2);
+		panel2.add(g2);
+		
+		JPanel panel3 = new JPanel();
+		panel3.setBounds(12, 443, 558, 151);
+		getContentPane().add(panel3);
+		
+		List<Double> scores3 = new ArrayList<>();
+		
+		for(double i = 1 ; i < 90 ; i ++) {
+			scores3.add(calculosFluxoPotFund.CalculaOndaTensao(12, i , 2.2));
+			
+		}
+		
+		panel3.setLayout(new GridLayout(0, 1, 0, 0));
+		
+		GraphPanel g3 = new GraphPanel(scores2);
+		panel3.add(g3);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(582, 211, 323, 105);
@@ -91,7 +127,7 @@ public class Fluxo_Pot_Fund extends JFrame {
 		panel_1.add(label);
 		
 		JPanel panel_2 = new JPanel();
-		panel_2.setBounds(582, 42, 323, 122);
+		panel_2.setBounds(582, 42, 323, 105);
 		getContentPane().add(panel_2);
 		panel_2.setLayout(null);
 		
@@ -119,6 +155,54 @@ public class Fluxo_Pot_Fund extends JFrame {
 		});
 		btnOk.setBounds(651, 157, 117, 25);
 		getContentPane().add(btnOk);
+		
+		JButton button = new JButton("Ok");
+		button.setBounds(651, 328, 117, 25);
+		getContentPane().add(button);
+		
+		JSeparator separator_1 = new JSeparator();
+		separator_1.setBounds(12, 399, 1400, 2);
+		getContentPane().add(separator_1);
+		
+		JLabel lblPotnciaInstantnea = new JLabel("Potência Instantânea");
+		lblPotnciaInstantnea.setBounds(12, 406, 153, 15);
+		getContentPane().add(lblPotnciaInstantnea);
+		
+		JLabel lblPotenciaAtiva = new JLabel("Potência Ativa");
+		lblPotenciaAtiva.setBounds(22, 592, 101, 15);
+		getContentPane().add(lblPotenciaAtiva);
+		
+		tfPotenciaAtiva = new JTextField();
+		tfPotenciaAtiva.setBounds(12, 612, 117, 25);
+		getContentPane().add(tfPotenciaAtiva);
+		tfPotenciaAtiva.setColumns(10);
+		
+		tfPotenciaReativa = new JTextField();
+		tfPotenciaReativa.setColumns(10);
+		tfPotenciaReativa.setBounds(168, 612, 117, 25);
+		getContentPane().add(tfPotenciaReativa);
+		
+		JLabel lblPotenciaReativa = new JLabel("Potencia Reativa");
+		lblPotenciaReativa.setBounds(171, 592, 119, 15);
+		getContentPane().add(lblPotenciaReativa);
+		
+		JLabel lblPotenciaAparente = new JLabel("Potência Aparente");
+		lblPotenciaAparente.setBounds(6, 649, 132, 15);
+		getContentPane().add(lblPotenciaAparente);
+		
+		tfPotenciaAparente = new JTextField();
+		tfPotenciaAparente.setColumns(10);
+		tfPotenciaAparente.setBounds(12, 676, 117, 25);
+		getContentPane().add(tfPotenciaAparente);
+		
+		JLabel lblFatorDePotncia = new JLabel("Fator de Potência");
+		lblFatorDePotncia.setBounds(168, 649, 132, 15);
+		getContentPane().add(lblFatorDePotncia);
+		
+		tfFatorPotencia = new JTextField();
+		tfFatorPotencia.setColumns(10);
+		tfFatorPotencia.setBounds(168, 679, 117, 25);
+		getContentPane().add(tfFatorPotencia);
 		
 		
 		
