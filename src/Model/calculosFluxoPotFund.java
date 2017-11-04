@@ -1,51 +1,22 @@
 package Model;
 
+import java.lang.Math;
+
 public class calculosFluxoPotFund {
 
-	private double frequenciaAngular;
-	private double amplitude;
-	private double tensao;
-	private double corrente;
-	private double anguloFase;
-	private int numeroHarmonicos;
-	public double getFrequenciaAngular() {
+	
+	private static double frequenciaAngular = Math.toRadians(2* Math.PI*60);
+		
+	public static double getFrequenciaAngular() {
 		return frequenciaAngular;
 	}
 	public void setFrequenciaAngular(double frequenciaAngular) {
-		this.frequenciaAngular = frequenciaAngular;
+		calculosFluxoPotFund.frequenciaAngular = frequenciaAngular;
 	}
-	public double getAmplitude() {
-		return amplitude;
-	}
-	public void setAmplitude(double amplitude) {
-		this.amplitude = amplitude;
-	}
-	public double getTensao() {
-		return tensao;
-	}
-	public void setTensao(double tensao) {
-		this.tensao = tensao;
-	}
-	public double getCorrente() {
-		return corrente;
-	}
-	public void setCorrente(double corrente) {
-		this.corrente = corrente;
-	}
-	public double getAnguloFase() {
-		return anguloFase;
-	}
-	public void setAnguloFase(double anguloFase) {
-		this.anguloFase = anguloFase;
-	}
-	public int getNumeroHarmonicos() {
-		return numeroHarmonicos;
-	}
-	public void setNumeroHarmonicos(int numeroHarmonicos) {
-		this.numeroHarmonicos = numeroHarmonicos;
+		
+	public static double CalculaOndaTensao(double j, double t, double k) {
+		return j*Math.cos(Math.toDegrees(getFrequenciaAngular()*t)+ Math.toDegrees(k));
+		
 	}
 	
-	public double CalculaOndaTensao(double amplitude, double frequenciaAngular , double t,double anguloFase) {
-		return amplitude*Math.cos(Math.toDegrees(frequenciaAngular*t)+ Math.toDegrees(anguloFase));
-	}
 }

@@ -18,7 +18,6 @@ public class Fluxo_Pot_Harmonico extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private JPanel painelGraficoTensao;
 	/**
 	 * Launch the application.
 	 */
