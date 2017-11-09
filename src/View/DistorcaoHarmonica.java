@@ -1,4 +1,4 @@
-package View;
+package view;
 
 import java.awt.EventQueue;
 import java.awt.GridLayout;
@@ -11,40 +11,20 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
 
-import Model.calculosFluxoPotFund;
+import model.calculosFluxoPotFund;
 
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JSeparator;
 
-public class Distorcao_Harmonica extends JFrame {
+public class DistorcaoHarmonica extends JFrame {
 
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Distorcao_Harmonica frame = new Distorcao_Harmonica();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
-	public Distorcao_Harmonica() {
+	
+	public DistorcaoHarmonica() {
 		setBounds(100, 100, 1200, 800);
 		getContentPane().setLayout(null);
 		
@@ -73,7 +53,7 @@ public class Distorcao_Harmonica extends JFrame {
 		List<Double> scores2 = new ArrayList<>();
 		
 		for(double i = 1 ; i < 90 ; i ++) {
-			scores2.add(calculosFluxoPotFund.CalculaOndaTensao(12, i , 2.2));
+			scores2.add(i);
 			
 		}
 		
@@ -89,7 +69,7 @@ public class Distorcao_Harmonica extends JFrame {
 		List<Double> scores3 = new ArrayList<>();
 		
 		for(double i = 1 ; i < 90 ; i ++) {
-			scores3.add(calculosFluxoPotFund.CalculaOndaTensao(12, i , 2.2));
+			scores3.add(i);
 			
 		}
 		
@@ -105,7 +85,7 @@ public class Distorcao_Harmonica extends JFrame {
 		List<Double> scores4 = new ArrayList<>();
 		
 		for(double i = 1 ; i < 90 ; i ++) {
-			scores4.add(calculosFluxoPotFund.CalculaOndaTensao(12, i , 2.2));
+			scores4.add(i);
 			
 		}
 		

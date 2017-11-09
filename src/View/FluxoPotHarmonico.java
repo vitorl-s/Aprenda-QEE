@@ -1,4 +1,4 @@
-package View;
+package view;
 
 import java.awt.EventQueue;
 import java.awt.GridLayout;
@@ -12,7 +12,7 @@ import javax.swing.JSpinner;
 import javax.swing.JSeparator;
 import javax.swing.JPanel;
 
-public class Fluxo_Pot_Harmonico extends JFrame {
+public class FluxoPotHarmonico extends JFrame {
 
 	/**
 	 * 
@@ -21,23 +21,13 @@ public class Fluxo_Pot_Harmonico extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Fluxo_Pot_Harmonico frame = new Fluxo_Pot_Harmonico();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
+	
 
 	/**
 	 * Create the frame.
 	 */
-	public Fluxo_Pot_Harmonico() {
+	public FluxoPotHarmonico() {
 		setTitle("Simulacao Fluxo Potencia Harmonico");
 		setBounds(100, 100, 900, 500);
 		getContentPane().setLayout(null);

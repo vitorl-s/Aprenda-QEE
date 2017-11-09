@@ -2,7 +2,7 @@ package Controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import View.Fluxo_Pot_Fund;
+import View.FluxoPotFund;
 
 
 public class AcaoBotaoSimulacao1 implements ActionListener{
@@ -10,7 +10,7 @@ public class AcaoBotaoSimulacao1 implements ActionListener{
 	
 	
 	public void actionPerformed(ActionEvent e) {
-		Fluxo_Pot_Fund frame = new Fluxo_Pot_Fund();
+		FluxoPotFund frame = new FluxoPotFund();
 		frame.setVisible(true);
 	}
 }
