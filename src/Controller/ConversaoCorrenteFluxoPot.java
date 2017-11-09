@@ -1,6 +1,7 @@
 package Controller;
 
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.List;
 
 import javax.swing.JSpinner;
@@ -8,7 +9,7 @@ import javax.swing.JSpinner;
 import Model.calculosFluxoPotFund;
 import View.GraphPanel;
 
-public class ConversaoCorrenteFluxoPot {
+public class ConversaoCorrenteFluxoPot implements ActionListener{
 	
 	GraphPanel grafico;
 	List<Double> scores;

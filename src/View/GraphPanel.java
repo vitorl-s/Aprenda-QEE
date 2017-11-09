@@ -62,7 +62,7 @@ public class GraphPanel extends JPanel {
             int y1 = y0;
             if (scores.size() > 0) {
                 g2.setColor(gridColor);
-                g2.drawLine(padding + labelPadding + 1 + pointWidth, y0, getWidth() - padding, y1);
+                //g2.drawLine(padding + labelPadding + 1 + pointWidth, y0, getWidth() - padding, y1);
                 g2.setColor(Color.BLACK);
                 String yLabel = ((int) ((getMinScore() + (getMaxScore() - getMinScore()) * ((i * 1.0) / numberYDivisions)) * 100)) / 100.0 + "";
                 FontMetrics metrics = g2.getFontMetrics();
@@ -81,7 +81,7 @@ public class GraphPanel extends JPanel {
                 int y1 = y0 - pointWidth;
                 if ((i % ((int) ((scores.size() / 20.0)) + 1)) == 0) {
                     g2.setColor(gridColor);
-                    g2.drawLine(x0, getHeight() - padding - labelPadding - 1 - pointWidth, x1, padding);
+                    //g2.drawLine(x0, getHeight() - padding - labelPadding - 1 - pointWidth, x1, padding);
                     g2.setColor(Color.BLACK);
                     String xLabel = i + "";
                     FontMetrics metrics = g2.getFontMetrics();

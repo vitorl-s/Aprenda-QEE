@@ -1,4 +1,4 @@
-package view;
+package View;
 
 import java.awt.EventQueue;
 import java.awt.GridLayout;
@@ -11,7 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
 
-import model.calculosFluxoPotFund;
+import Model.calculosFluxoPotFund;
 
 import javax.swing.JComboBox;
 import javax.swing.JFrame;

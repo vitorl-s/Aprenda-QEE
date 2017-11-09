@@ -1,4 +1,4 @@
-package view;
+package View;
 
 
 
@@ -6,10 +6,14 @@ package view;
 import java.util.ArrayList;
 import java.util.List;
 
-import controller.acoesFluxoPotFund;
-import model.calculosFluxoPotFund;
+
+
 
 import javax.swing.*;
+
+import Controller.ConversaoCorrenteFluxoPot;
+import Controller.ConversaoTensaoFluxoPot;
+import Controller.VoltaMenuPrincipal;
 
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
@@ -17,10 +21,11 @@ import java.awt.event.ActionEvent;
 
 
 
+
 public class FluxoPotFund extends JFrame {
 	
 	private static final long serialVersionUID = 1L;
-	JFrame frame;
+	
 	private JTextField tfPotenciaAtiva;
 	private JTextField tfPotenciaReativa;
 	private JTextField tfPotenciaAparente;
@@ -105,19 +110,10 @@ public class FluxoPotFund extends JFrame {
 		panel_1.add(label);
 		
 		JButton btnGerarCorrente = new JButton("Gerar corrente");
-		btnGerarCorrente.setBounds(112, 117, 103, 23);
+		btnGerarCorrente.setBounds(112, 117, 144, 23);
 		panel_1.add(btnGerarCorrente);
-		btnGerarCorrente.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				g2.revalidate();
-				scores2.clear();
-				for(double i = 1 ; i < 180 ; i++) {
-					
-					scores2.add(calculosFluxoPotFund.CalculaOndaCorrente(contador3, i , contador4));
-					g2.setScores(scores2);
-				}
-			}
-		});
+		btnGerarCorrente.addActionListener(new ConversaoCorrenteFluxoPot(g2,scores2,contador3,contador4));
+		
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBounds(931, 36, 323, 127);
@@ -141,19 +137,9 @@ public class FluxoPotFund extends JFrame {
 		panel_2.add(lblAmplitude);
 		
 		JButton btnGerarTensão = new JButton("Gerar onda de tensão");
-		btnGerarTensão.setBounds(104, 92, 137, 23);
+		btnGerarTensão.setBounds(104, 92, 159, 23);
 		panel_2.add(btnGerarTensão);
-		btnGerarTensão.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				g1.revalidate();
-				scores.clear();
-				for(double i = 1 ; i < 180 ; i++) {
-					
-					scores.add(calculosFluxoPotFund.CalculaOndaTensao(contador1, i , contador2));
-					g1.setScores(scores);
-				}
-			}
-		});
+		btnGerarTensão.addActionListener(new ConversaoTensaoFluxoPot(g1,scores,contador1,contador2));
 		
 		JSeparator separator_1 = new JSeparator();
 		separator_1.setBounds(12, 377, 1242, 2);
@@ -200,8 +186,12 @@ public class FluxoPotFund extends JFrame {
 		getContentPane().add(tfFatorPotencia);
 		
 		JButton btnGerarPotenciaInstantanea = new JButton("Gerar Potencia Instantanea");
-		btnGerarPotenciaInstantanea.setBounds(991, 440, 165, 23);
+		btnGerarPotenciaInstantanea.setBounds(991, 440, 198, 23);
 		getContentPane().add(btnGerarPotenciaInstantanea);	
+		
+		JButton btnVoltarParaO = new JButton("Voltar para o Menu Principal");
+		btnVoltarParaO.setBounds(415, 680, 215, 24);
+		getContentPane().add(btnVoltarParaO);
 		
 }
 	}
