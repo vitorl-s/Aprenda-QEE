@@ -29,11 +29,12 @@ public class ConversaoCorrenteFluxoPot implements ActionListener{
 	
 
 	public void actionPerformed(ActionEvent e) {
-		double aux = Double.parseDouble(corrente.getValue().toString());
-		calculos.setAmplitudeTensao(aux);
-		double aux2 = Double.parseDouble(anguloCorrente.getValue().toString());
-		calculos.setAngulo(aux2);
-			
+		calculosFluxoPotFund.amplitudeCorrente = Double.parseDouble(corrente.getValue().toString());
+		calculosFluxoPotFund.angulo2 = Double.parseDouble(anguloCorrente.getValue().toString());
+		
+		double aux = calculosFluxoPotFund.amplitudeCorrente;
+		double aux2 = calculosFluxoPotFund.angulo2;
+		
 		grafico.revalidate();
 		scores.clear();
 		for(int i = 0 ; i<180 ; i++){

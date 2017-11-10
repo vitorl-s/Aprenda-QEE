@@ -9,7 +9,7 @@ import javax.swing.border.EmptyBorder;
 
 import Controller.AcaoBotaoSimulacao1;
 import Controller.AcaoBotaoSimulacao2;
-import Controller.AcaoBotaoSimulacao3;
+
 
 
 
@@ -62,11 +62,6 @@ public class Simular_View extends JFrame {
 		btnDistorHarm.addActionListener(new AcaoBotaoSimulacao2());
 		btnDistorHarm.setBounds(152, 275, 256, 46);
 		contentPane.add(btnDistorHarm);
-		
-		JButton btnFluxoPotHarm = new JButton("Fluxo de potência Harmônico");
-		btnFluxoPotHarm.addActionListener(new AcaoBotaoSimulacao3());
-		btnFluxoPotHarm.setBounds(152, 343, 256, 46);
-		contentPane.add(btnFluxoPotHarm);
 		
 	}
 

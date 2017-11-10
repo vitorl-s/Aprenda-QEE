@@ -32,10 +32,11 @@ public class ConversaoTensaoFluxoPot implements ActionListener{
 	
 
 	public void actionPerformed(ActionEvent e) {
-		double aux = Double.parseDouble(tensao.getValue().toString());
-		calculos.setAmplitudeTensao(aux);
-		double aux2 = Double.parseDouble(anguloTensao.getValue().toString());
-		calculos.setAngulo(aux2);
+		calculosFluxoPotFund.amplitudeTensao = Double.parseDouble(tensao.getValue().toString());
+		calculosFluxoPotFund.angulo = Double.parseDouble(anguloTensao.getValue().toString());
+		
+		double aux = calculosFluxoPotFund.amplitudeTensao;
+		double aux2 = calculosFluxoPotFund.angulo;
 			
 		grafico.revalidate();
 		scores.clear();

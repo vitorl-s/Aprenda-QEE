@@ -12,6 +12,7 @@ import java.util.List;
 import javax.swing.*;
 
 import Controller.ConversaoCorrenteFluxoPot;
+import Controller.ConversaoPotenciaInst;
 import Controller.ConversaoTensaoFluxoPot;
 import Controller.VoltaMenuPrincipal;
 
@@ -33,7 +34,7 @@ public class FluxoPotFund extends JFrame {
 	private JSpinner contador1;
 
 	public FluxoPotFund() {
-		setBounds(100, 100, 1280, 768);
+		setBounds(100, 100, 1280, 670);
 		getContentPane().setLayout(null);
 		
 		contador1 = new JSpinner();
@@ -44,15 +45,15 @@ public class FluxoPotFund extends JFrame {
 		getContentPane().add(lblTenso);
 		
 		JLabel lblCorrente_1 = new JLabel("Corrente");
-		lblCorrente_1.setBounds(12, 188, 63, 15);
+		lblCorrente_1.setBounds(12, 167, 63, 15);
 		getContentPane().add(lblCorrente_1);
 		
 		JSeparator separator = new JSeparator();
-		separator.setBounds(12, 175, 1242, 2);
+		separator.setBounds(12, 154, 1253, 2);
 		getContentPane().add(separator);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(13, 11, 617, 153);
+		panel.setBounds(13, 37, 617, 106);
 		getContentPane().add(panel);
 		
 		List<Double> scores = new ArrayList<>();
@@ -66,30 +67,27 @@ public class FluxoPotFund extends JFrame {
 		g1.setLayout(null);
 		
 		JPanel panel2 = new JPanel();
-		panel2.setBounds(12, 200, 618, 176);
+		panel2.setBounds(12, 193, 618, 106);
 		getContentPane().add(panel2);
 		
 		List<Double> scores2 = new ArrayList<>();
-		
-		
 		panel2.setLayout(new GridLayout(0, 1, 0, 0));
 		
 		GraphPanel g2 = new GraphPanel(scores2);
 		panel2.add(g2);
 		
 		JPanel panel3 = new JPanel();
-		panel3.setBounds(12, 403, 618, 176);
+		panel3.setBounds(12, 349, 618, 106);
 		getContentPane().add(panel3);
 		
 		List<Double> scores3 = new ArrayList<>();
-		
 		panel3.setLayout(new GridLayout(0, 1, 0, 0));
 		
-		GraphPanel g3 = new GraphPanel(scores2);
+		GraphPanel g3 = new GraphPanel(scores3);
 		panel3.add(g3);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(931, 213, 323, 153);
+		panel_1.setBounds(931, 167, 323, 133);
 		getContentPane().add(panel_1);
 		panel_1.setLayout(null);
 		
@@ -110,13 +108,13 @@ public class FluxoPotFund extends JFrame {
 		panel_1.add(label);
 		
 		JButton btnGerarCorrente = new JButton("Gerar corrente");
-		btnGerarCorrente.setBounds(112, 117, 144, 23);
+		btnGerarCorrente.setBounds(112, 89, 144, 23);
 		panel_1.add(btnGerarCorrente);
 		btnGerarCorrente.addActionListener(new ConversaoCorrenteFluxoPot(g2,scores2,contador3,contador4));
 		
 		
 		JPanel panel_2 = new JPanel();
-		panel_2.setBounds(931, 36, 323, 127);
+		panel_2.setBounds(931, 16, 323, 127);
 		getContentPane().add(panel_2);
 		panel_2.setLayout(null);
 		
@@ -142,56 +140,62 @@ public class FluxoPotFund extends JFrame {
 		btnGerarTensão.addActionListener(new ConversaoTensaoFluxoPot(g1,scores,contador1,contador2));
 		
 		JSeparator separator_1 = new JSeparator();
-		separator_1.setBounds(12, 377, 1242, 2);
+		separator_1.setBounds(12, 310, 1242, 2);
 		getContentPane().add(separator_1);
 		
 		JLabel lblPotnciaInstantnea = new JLabel("Potência Instantânea");
-		lblPotnciaInstantnea.setBounds(12, 387, 153, 15);
+		lblPotnciaInstantnea.setBounds(12, 323, 153, 15);
 		getContentPane().add(lblPotnciaInstantnea);
 		
 		JLabel lblPotenciaAtiva = new JLabel("Potência Ativa");
-		lblPotenciaAtiva.setBounds(12, 590, 101, 15);
+		lblPotenciaAtiva.setBounds(12, 466, 101, 15);
 		getContentPane().add(lblPotenciaAtiva);
 		
 		tfPotenciaAtiva = new JTextField();
-		tfPotenciaAtiva.setBounds(12, 616, 117, 25);
+		tfPotenciaAtiva.setBounds(12, 492, 117, 25);
 		getContentPane().add(tfPotenciaAtiva);
 		tfPotenciaAtiva.setColumns(10);
 		
 		tfPotenciaReativa = new JTextField();
 		tfPotenciaReativa.setColumns(10);
-		tfPotenciaReativa.setBounds(169, 616, 117, 25);
+		tfPotenciaReativa.setBounds(165, 492, 117, 25);
 		getContentPane().add(tfPotenciaReativa);
 		
 		JLabel lblPotenciaReativa = new JLabel("Potencia Reativa");
-		lblPotenciaReativa.setBounds(169, 590, 119, 15);
+		lblPotenciaReativa.setBounds(165, 466, 119, 15);
 		getContentPane().add(lblPotenciaReativa);
 		
 		JLabel lblPotenciaAparente = new JLabel("Potência Aparente");
-		lblPotenciaAparente.setBounds(12, 652, 132, 15);
+		lblPotenciaAparente.setBounds(12, 528, 132, 15);
 		getContentPane().add(lblPotenciaAparente);
 		
 		tfPotenciaAparente = new JTextField();
 		tfPotenciaAparente.setColumns(10);
-		tfPotenciaAparente.setBounds(12, 679, 117, 25);
+		tfPotenciaAparente.setBounds(12, 554, 117, 25);
 		getContentPane().add(tfPotenciaAparente);
 		
 		JLabel lblFatorDePotncia = new JLabel("Fator de Potência");
-		lblFatorDePotncia.setBounds(169, 652, 132, 15);
+		lblFatorDePotncia.setBounds(165, 528, 132, 15);
 		getContentPane().add(lblFatorDePotncia);
 		
 		tfFatorPotencia = new JTextField();
 		tfFatorPotencia.setColumns(10);
-		tfFatorPotencia.setBounds(169, 679, 117, 25);
+		tfFatorPotencia.setBounds(165, 554, 117, 25);
 		getContentPane().add(tfFatorPotencia);
 		
 		JButton btnGerarPotenciaInstantanea = new JButton("Gerar Potencia Instantanea");
-		btnGerarPotenciaInstantanea.setBounds(991, 440, 198, 23);
+		btnGerarPotenciaInstantanea.addActionListener(new ConversaoPotenciaInst(g3,scores3,tfPotenciaAtiva,tfPotenciaReativa,tfPotenciaAparente,tfFatorPotencia));
+		btnGerarPotenciaInstantanea.setBounds(437, 493, 198, 23);
 		getContentPane().add(btnGerarPotenciaInstantanea);	
 		
 		JButton btnVoltarParaO = new JButton("Voltar para o Menu Principal");
-		btnVoltarParaO.setBounds(415, 680, 215, 24);
+		btnVoltarParaO.setBounds(437, 554, 215, 24);
 		getContentPane().add(btnVoltarParaO);
-		
+
+		TrianguloPotencias tp = new TrianguloPotencias(100 , 50);
+		tp.setBounds(852, 339, 279, 265);
+        tp.setVisible(true);
+		getContentPane().add(tp);
+     
 }
 	}
