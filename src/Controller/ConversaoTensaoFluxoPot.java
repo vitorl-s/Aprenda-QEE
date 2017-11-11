@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 
+import javax.swing.JOptionPane;
 import javax.swing.JSpinner;
 
 
@@ -32,17 +33,34 @@ public class ConversaoTensaoFluxoPot implements ActionListener{
 	
 
 	public void actionPerformed(ActionEvent e) {
+		
+		
 		calculosFluxoPotFund.amplitudeTensao = Double.parseDouble(tensao.getValue().toString());
 		calculosFluxoPotFund.angulo = Double.parseDouble(anguloTensao.getValue().toString());
-		
-		double aux = calculosFluxoPotFund.amplitudeTensao;
-		double aux2 = calculosFluxoPotFund.angulo;
+		try{
 			
-		grafico.revalidate();
-		scores.clear();
-		for(int i = 0 ; i<180 ; i++){
-			scores.add(calculos.CalculaOndaAmplitudeTensao(aux, i, aux2));
-			grafico.setScores(scores);
-		}	
+			if(calculosFluxoPotFund.amplitudeTensao < 0 || calculosFluxoPotFund.amplitudeTensao > 220){
+				IllegalArgumentException e1 = new IllegalArgumentException();
+				throw e1;
+			}
+			else if(calculosFluxoPotFund.angulo <-180 || calculosFluxoPotFund.angulo > 180){
+				RuntimeException e2 = new RuntimeException();
+				throw e2;
+			}else{
+					double aux = calculosFluxoPotFund.amplitudeTensao;
+					double aux2 = calculosFluxoPotFund.angulo;
+					grafico.revalidate();
+					scores.clear();
+					for(int i = 0 ; i<180 ; i++){
+						scores.add(calculos.CalculaOndaAmplitudeTensao(aux, i, aux2));
+						grafico.setScores(scores);
+					}
+				}
+			}catch(IllegalArgumentException e1){	
+				JOptionPane.showMessageDialog(null, "A amplitude da tensão deve ficar entre 0 e 220");
+		} catch(RuntimeException e2){
+			JOptionPane.showMessageDialog(null, "O ângulo da tensão deve ficar entre -180 e 180 graus");
+		}
+		
 	}
 }

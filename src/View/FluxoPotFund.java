@@ -14,11 +14,10 @@ import javax.swing.*;
 import Controller.ConversaoCorrenteFluxoPot;
 import Controller.ConversaoPotenciaInst;
 import Controller.ConversaoTensaoFluxoPot;
-import Controller.VoltaMenuPrincipal;
+import Model.calculosFluxoPotFund;
 
 import java.awt.GridLayout;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+
 
 
 
@@ -192,7 +191,7 @@ public class FluxoPotFund extends JFrame {
 		btnVoltarParaO.setBounds(437, 554, 215, 24);
 		getContentPane().add(btnVoltarParaO);
 
-		TrianguloPotencias tp = new TrianguloPotencias(100 , 50);
+		TrianguloPotencias tp = new TrianguloPotencias(calculosFluxoPotFund.getCoordX() , calculosFluxoPotFund.getCoordY());
 		tp.setBounds(852, 339, 279, 265);
         tp.setVisible(true);
 		getContentPane().add(tp);

@@ -18,6 +18,7 @@ public class ConversaoPotenciaInst implements ActionListener{
 	JTextField potenciaAtiva,potenciaReativa,potenciaAparente,fatorPot;
 	calculosFluxoPotFund calculos;
 	
+	
 	public ConversaoPotenciaInst(GraphPanel grafico, List<Double> scores, JTextField potenciaAtiva,
 			JTextField potenciaReativa, JTextField potenciaAparente, JTextField fatorPot) {
 		super();
@@ -47,7 +48,9 @@ public class ConversaoPotenciaInst implements ActionListener{
 		potenciaAtiva.setText(String.valueOf(calculos.CalculaPotAtiv(tensao, angulo, corrente, angulo2)) + " W");
 		potenciaReativa.setText(String.valueOf(calculos.CalculaPotReat(tensao, angulo, corrente, angulo2)) + " VAR");
 		potenciaAparente.setText(String.valueOf(calculos.CalculaPotAparente(tensao, corrente))+ " VA");
-		fatorPot.setText(String.valueOf(calculos.CalculaFatorPot(angulo, angulo2)));
+		fatorPot.setText(String.valueOf(calculos.CalculaFatorPot(angulo, angulo2) ));
+		calculosFluxoPotFund.setCoordX(calculos.CalculaPotAtiv(tensao, angulo, corrente, angulo2));
+		calculosFluxoPotFund.setCoordY(calculos.CalculaPotReat(tensao, angulo, corrente, angulo2));	
 	}
 
 }
