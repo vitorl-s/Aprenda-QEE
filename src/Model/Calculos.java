@@ -8,4 +8,6 @@ public interface Calculos {
 	public double CalculaPotReat(double amplitudeTensao, double angulo ,double amplitudeTensaoCorrente,double angulo2);
 	public double CalculaPotAparente(double amplitudeTensao, double amplitudeTensaoCorrente);
 	public double CalculaFatorPot(double angulo, double angulo2);
+	public double CalculaOndaHarmonica(double amplitudeTensao, int ordemHarmonica,double angulo);
+	public double CalculaOndaDistorcida(int numeroHarmonicos);
 }

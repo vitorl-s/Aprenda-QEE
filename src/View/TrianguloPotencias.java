@@ -9,7 +9,7 @@ import java.awt.RenderingHints;
 import java.awt.Stroke;
 
 import javax.swing.JPanel;
-import javax.swing.JFrame;
+
 
 public class TrianguloPotencias extends JPanel {
 

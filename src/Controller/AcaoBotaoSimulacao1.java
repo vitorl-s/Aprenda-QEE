@@ -9,7 +9,6 @@ public class AcaoBotaoSimulacao1 implements ActionListener{
 	
 	public void actionPerformed(ActionEvent e) {
 		FluxoPotFund frame = new FluxoPotFund();
-		frame.setVisible(true);
 	}
 }
 	

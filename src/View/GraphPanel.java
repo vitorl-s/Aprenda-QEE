@@ -121,7 +121,7 @@ public class GraphPanel extends JPanel {
     private double getMinScore() {
         double minScore = Double.MAX_VALUE;
         for (Double score : scores) {
-            minScore = Math.min(minScore, score);
+            minScore = Math.min(-220, score);
         }
         return minScore;
     }
@@ -129,7 +129,7 @@ public class GraphPanel extends JPanel {
     private double getMaxScore() {
         double maxScore = Double.MIN_VALUE;
         for (Double score : scores) {
-            maxScore = Math.max(maxScore, score);
+            maxScore = Math.max(220, score);
         }
         return maxScore;
     }

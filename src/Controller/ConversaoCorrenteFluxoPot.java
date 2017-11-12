@@ -7,7 +7,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.JSpinner;
 
-import Model.calculosFluxoPotFund;
+import Model.CalculosFluxoPotFund;
 import View.GraphPanel;
 
 public class ConversaoCorrenteFluxoPot implements ActionListener{
@@ -15,7 +15,7 @@ public class ConversaoCorrenteFluxoPot implements ActionListener{
 	GraphPanel grafico;
 	List<Double> scores;
 	JSpinner corrente,anguloCorrente;
-	calculosFluxoPotFund calculos;
+	CalculosFluxoPotFund calculos;
 	
 	
 	public ConversaoCorrenteFluxoPot(GraphPanel grafico, List<Double> scores, JSpinner corrente, JSpinner anguloCorrente) {
@@ -24,31 +24,32 @@ public class ConversaoCorrenteFluxoPot implements ActionListener{
 		this.scores = scores;
 		this.corrente = corrente;
 		this.anguloCorrente = anguloCorrente;
-		calculos = new calculosFluxoPotFund();
+		calculos = new CalculosFluxoPotFund();
 	}
 	
 	
 
 	public void actionPerformed(ActionEvent e) {
-		calculosFluxoPotFund.amplitudeCorrente = Double.parseDouble(corrente.getValue().toString());
-		calculosFluxoPotFund.angulo2 = Double.parseDouble(anguloCorrente.getValue().toString());
+		double amplitudeCorrente = Double.parseDouble(corrente.getValue().toString());
+		double angulo2 = Double.parseDouble(anguloCorrente.getValue().toString());
+		
+		CalculosFluxoPotFund.amplitudeCorrente = amplitudeCorrente;
+		CalculosFluxoPotFund.angulo2 = angulo2;
 		
 		try{
 			
-			if(calculosFluxoPotFund.amplitudeCorrente < 0 || calculosFluxoPotFund.amplitudeCorrente > 100){
+			if(amplitudeCorrente < 0 || amplitudeCorrente > 100){
 				IllegalArgumentException e1 = new IllegalArgumentException();
 				throw e1;
 			}
-			else if(calculosFluxoPotFund.angulo2 <-180 || calculosFluxoPotFund.angulo2 > 180){
+			else if(angulo2 <-180 || angulo2 > 180){
 				RuntimeException e2 = new RuntimeException();
 				throw e2;
 			}else{
-					double aux = calculosFluxoPotFund.amplitudeCorrente;
-					double aux2 = calculosFluxoPotFund.angulo2;
 					grafico.revalidate();
 					scores.clear();
 					for(int i = 0 ; i<180 ; i++){
-						scores.add(calculos.CalculaOndaCorrente(aux, i, aux2));
+						scores.add(calculos.CalculaOndaCorrente(amplitudeCorrente, i, angulo2));
 						grafico.setScores(scores);
 					}
 				}
