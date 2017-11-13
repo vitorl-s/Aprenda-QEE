@@ -60,11 +60,12 @@ public class ConversaoPotenciaInst implements ActionListener{
 		potenciaAtiva.setText(String.valueOf(calculos.CalculaPotAtiv(tensao, angulo, corrente, angulo2)) + " W");
 		potenciaReativa.setText(String.valueOf(calculos.CalculaPotReat(tensao, angulo, corrente, angulo2)) + " VAR");
 		potenciaAparente.setText(String.valueOf(calculos.CalculaPotAparente(tensao, corrente))+ " VA");
-		fatorPot.setText(String.valueOf(fatorPotencia ));
-		triangulo = new TrianguloPotencias(20,20);
-		triangulo.setVisible(true);
-		triangulo.setBounds(852, 339, 279, 265);
-		FluxoPotFund.add(triangulo);
+		fatorPot.setText(String.valueOf(fatorPotencia));
+		triangulo.revalidate();
+		triangulo.repaint();
+		triangulo.setCoordenadaX(calculos.CalculaPotAtiv(tensao, angulo, corrente, angulo2)/100);
+		triangulo.setCoordenadaY(calculos.CalculaPotReat(tensao, angulo, corrente, angulo2)/100);
+		
 	}
 
 }

@@ -30,11 +30,11 @@ public class DistorcaoHarmonica extends JFrame {
 
 	
 	public DistorcaoHarmonica() {
-		setBounds(100, 100, 1240, 760);
+		setBounds(100, 100, 1240, 690);
 		getContentPane().setLayout(null);
 		
 		JPanel painelGraficoTensao = new JPanel();
-		painelGraficoTensao.setBounds(13, 39, 514, 108);
+		painelGraficoTensao.setBounds(13, 28, 514, 87);
 		getContentPane().add(painelGraficoTensao);
 		
 		List<Double> scores = new ArrayList<>();
@@ -47,12 +47,12 @@ public class DistorcaoHarmonica extends JFrame {
 		painelGraficoTensao.add(g1);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(301, 171, 201, 380);
+		panel.setBounds(301, 139, 201, 380);
 		getContentPane().add(panel);
 		panel.setLayout(null);
 		
 		JPanel panel2 = new JPanel();
-		panel2.setBounds(13, 193, 201, 97);
+		panel2.setBounds(13, 152, 201, 97);
 		getContentPane().add(panel2);
 		
 		List<Double> scores2 = new ArrayList<>();
@@ -63,7 +63,7 @@ public class DistorcaoHarmonica extends JFrame {
 		panel2.add(g2);
 		
 		JPanel panel3 = new JPanel();
-		panel3.setBounds(13, 301, 201, 97);
+		panel3.setBounds(13, 260, 201, 97);
 		getContentPane().add(panel3);
 		
 		List<Double> scores3 = new ArrayList<>();
@@ -74,7 +74,7 @@ public class DistorcaoHarmonica extends JFrame {
 		panel3.add(g3);
 		
 		JPanel panel4 = new JPanel();
-		panel4.setBounds(13, 419, 201, 97);
+		panel4.setBounds(13, 378, 201, 97);
 		getContentPane().add(panel4);
 		
 		List<Double> scores4 = new ArrayList<>();
@@ -85,7 +85,7 @@ public class DistorcaoHarmonica extends JFrame {
 		panel4.add(g4);
 		
 		JPanel panel5 = new JPanel();
-		panel5.setBounds(505, 193, 201, 97);
+		panel5.setBounds(505, 152, 201, 97);
 		getContentPane().add(panel5);
 		
 		List<Double> scores5 = new ArrayList<>();
@@ -96,7 +96,7 @@ public class DistorcaoHarmonica extends JFrame {
 		panel5.add(g5);
 		
 		JPanel panel6 = new JPanel();
-		panel6.setBounds(505, 301, 201, 97);
+		panel6.setBounds(505, 260, 201, 97);
 		getContentPane().add(panel6);
 		
 		List<Double> scores6 = new ArrayList<>();
@@ -107,7 +107,7 @@ public class DistorcaoHarmonica extends JFrame {
 		panel6.add(g6);
 		
 		JPanel panel7 = new JPanel();
-		panel7.setBounds(505, 419, 201, 97);
+		panel7.setBounds(505, 378, 201, 97);
 		getContentPane().add(panel7);
 		
 		List<Double> scores7 = new ArrayList<>();
@@ -118,7 +118,7 @@ public class DistorcaoHarmonica extends JFrame {
 		panel7.add(g7);
 		
 		JPanel panel8 = new JPanel();
-		panel8.setBounds(13, 579, 514, 114);
+		panel8.setBounds(13, 539, 514, 97);
 		getContentPane().add(panel8);
 		
 		List<Double> scores8 = new ArrayList<>();
@@ -255,15 +255,15 @@ public class DistorcaoHarmonica extends JFrame {
 		getContentPane().add(lblComponenteFundamental);
 		
 		JSeparator separator = new JSeparator();
-		separator.setBounds(10, 158, 1204, 2);
+		separator.setBounds(13, 126, 1204, 2);
 		getContentPane().add(separator);
 		
 		JSeparator separator_1 = new JSeparator();
-		separator_1.setBounds(13, 554, 1201, 2);
+		separator_1.setBounds(13, 522, 1201, 2);
 		getContentPane().add(separator_1);
 		
 		JLabel lblHarmnicos = new JLabel("Harmônicos");
-		lblHarmnicos.setBounds(13, 171, 86, 14);
+		lblHarmnicos.setBounds(13, 128, 86, 14);
 		getContentPane().add(lblHarmnicos);
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -272,7 +272,7 @@ public class DistorcaoHarmonica extends JFrame {
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setLayout(null);
-		panel_1.setBounds(792, 171, 201, 380);
+		panel_1.setBounds(793, 139, 201, 380);
 		getContentPane().add(panel_1);
 		
 		JLabel label_4 = new JLabel("Ordem Harmônica");
@@ -369,61 +369,61 @@ public class DistorcaoHarmonica extends JFrame {
 		panel_1.add(scrollPane_6);
 		
 		JLabel lblResultante = new JLabel("Resultante");
-		lblResultante.setBounds(13, 557, 76, 14);
+		lblResultante.setBounds(13, 524, 76, 14);
 		getContentPane().add(lblResultante);
 		
 		JButton gerar4 = new JButton("Gerar");
 		gerar4.addActionListener(new ConversaoHarmonicosDistHarm(g5,scores5,ordem4,angulo4,amplitude4));
-		gerar4.setBounds(716, 229, 67, 23);
+		gerar4.setBounds(716, 166, 67, 23);
 		getContentPane().add(gerar4);
 		
 		JButton gerar5 = new JButton("Gerar");
 		gerar5.addActionListener(new ConversaoHarmonicosDistHarm(g6,scores6,ordem5,angulo5,amplitude5));
-		gerar5.setBounds(716, 331, 67, 23);
+		gerar5.setBounds(716, 275, 67, 23);
 		getContentPane().add(gerar5);
 		
 		JButton gerar6 = new JButton("Gerar");
 		gerar6.addActionListener(new ConversaoHarmonicosDistHarm(g7,scores7,ordem6,angulo6,amplitude6));
-		gerar6.setBounds(716, 449, 67, 23);
+		gerar6.setBounds(716, 393, 67, 23);
 		getContentPane().add(gerar6);
 		
 		JButton gerar1 = new JButton("Gerar");
 		gerar1.addActionListener(new ConversaoHarmonicosDistHarm(g2,scores2,ordem1,angulo1,amplitude1));
-		gerar1.setBounds(224, 229, 67, 23);
+		gerar1.setBounds(224, 166, 67, 23);
 		getContentPane().add(gerar1);
 		
 		JButton gerar2 = new JButton("Gerar");
 		gerar2.addActionListener(new ConversaoHarmonicosDistHarm(g3,scores3,ordem2,angulo2,amplitude2));
-		gerar2.setBounds(224, 331, 67, 23);
+		gerar2.setBounds(224, 275, 67, 23);
 		getContentPane().add(gerar2);
 		
 		JButton gerar3 = new JButton("Gerar");
 		gerar3.addActionListener(new ConversaoHarmonicosDistHarm(g4,scores4,ordem3,angulo3,amplitude3));
-		gerar3.setBounds(224, 449, 67, 23);
+		gerar3.setBounds(224, 393, 67, 23);
 		getContentPane().add(gerar3);
 		
 		JButton button_5 = new JButton("Ampliar");
-		button_5.setBounds(716, 255, 67, 23);
+		button_5.setBounds(716, 200, 67, 23);
 		getContentPane().add(button_5);
 		
 		JButton button_6 = new JButton("Ampliar");
-		button_6.setBounds(716, 365, 67, 23);
+		button_6.setBounds(716, 309, 67, 23);
 		getContentPane().add(button_6);
 		
 		JButton button_7 = new JButton("Ampliar");
-		button_7.setBounds(716, 483, 67, 23);
+		button_7.setBounds(716, 427, 67, 23);
 		getContentPane().add(button_7);
 		
 		JButton button_8 = new JButton("Ampliar");
-		button_8.setBounds(224, 483, 67, 23);
+		button_8.setBounds(224, 427, 67, 23);
 		getContentPane().add(button_8);
 		
 		JButton button_9 = new JButton("Ampliar");
-		button_9.setBounds(224, 365, 67, 23);
+		button_9.setBounds(224, 309, 67, 23);
 		getContentPane().add(button_9);
 		
 		JButton button_10 = new JButton("Ampliar");
-		button_10.setBounds(224, 255, 67, 23);
+		button_10.setBounds(224, 200, 67, 23);
 		getContentPane().add(button_10);
 			
 	

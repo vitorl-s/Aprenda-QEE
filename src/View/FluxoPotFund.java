@@ -189,6 +189,11 @@ public class FluxoPotFund {
 		tfFatorPotencia.setBounds(165, 554, 117, 25);
 		FluxoPotFund.getContentPane().add(tfFatorPotencia);
 		
+		tp = new TrianguloPotencias(0,0);
+		tp.setVisible(true);
+		tp.setBounds(852, 339, 279, 265);
+		FluxoPotFund.add(tp);
+		
 		JButton btnGerarPotenciaInstantanea = new JButton("Gerar Potencia Instantanea");
 		btnGerarPotenciaInstantanea.addActionListener(new ConversaoPotenciaInst(FluxoPotFund,g3,scores3,tfPotenciaAtiva,tfPotenciaReativa,tfPotenciaAparente,tfFatorPotencia,tp));
 		btnGerarPotenciaInstantanea.setBounds(437, 493, 198, 23);
