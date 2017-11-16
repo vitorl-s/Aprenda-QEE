@@ -1,4 +1,4 @@
-package View;
+package view;
 
 
 
@@ -11,10 +11,9 @@ import java.util.List;
 
 import javax.swing.*;
 
-import Controller.ConversaoCorrenteFluxoPot;
-import Controller.ConversaoPotenciaInst;
-import Controller.ConversaoTensaoFluxoPot;
-
+import controller.ConversaoCorrenteFluxoPot;
+import controller.ConversaoPotenciaInst;
+import controller.ConversaoTensaoFluxoPot;
 
 import java.awt.GridLayout;
 

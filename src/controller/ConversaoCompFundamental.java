@@ -1,4 +1,4 @@
-package Controller;
+package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,8 +7,8 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.JSpinner;
 
-import Model.CalculosDistHarm;
-import View.GraphPanel;
+import model.CalculosDistHarm;
+import view.GraphPanel;
 
 public class ConversaoCompFundamental implements ActionListener {
 	

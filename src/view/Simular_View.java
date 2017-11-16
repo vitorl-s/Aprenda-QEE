@@ -1,4 +1,4 @@
-package View;
+package view;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -7,8 +7,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import Controller.AcaoBotaoSimulacao1;
-import Controller.AcaoBotaoSimulacao2;
+import controller.AcaoBotaoSimulacao1;
+import controller.AcaoBotaoSimulacao2;
 
 
 
@@ -17,25 +17,11 @@ import Controller.AcaoBotaoSimulacao2;
 
 public class Simular_View extends JFrame {
 
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	
-	
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		Simular_View frame = new Simular_View();
-		frame.setVisible(true);
-	}
-
-	/**
-	 * Create the frame.
-	 */
 	public Simular_View() {
 		setTitle("APRENDA QEE");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

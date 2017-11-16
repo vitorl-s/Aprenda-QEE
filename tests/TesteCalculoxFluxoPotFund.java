@@ -2,7 +2,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import Model.CalculosFluxoPotFund;
+import model.CalculosFluxoPotFund;
 
 public class TesteCalculoxFluxoPotFund {
 

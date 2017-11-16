@@ -1,4 +1,4 @@
-package Controller;
+package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,10 +8,10 @@ import java.util.Locale;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 
-import Model.CalculosFluxoPotFund;
-import View.GraphPanel;
-import View.TrianguloPotencias;
-import View.FluxoPotFund;
+import model.CalculosFluxoPotFund;
+import view.FluxoPotFund;
+import view.GraphPanel;
+import view.TrianguloPotencias;
 
 public class ConversaoPotenciaInst implements ActionListener{
 

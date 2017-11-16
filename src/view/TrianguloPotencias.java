@@ -1,4 +1,4 @@
-package View;
+package view;
 //TRIANGULO DE POTENCIAS
 import java.awt.BasicStroke;
 import java.awt.Color;

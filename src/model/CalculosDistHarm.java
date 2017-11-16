@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 import java.util.List;
 
@@ -27,10 +27,5 @@ public class CalculosDistHarm implements Calculos {
 	public double CalculaOndaHarmonica(double amplitude, double ordemHarmonica, double i ,double angulo2) {
 		return amplitude * Math.cos(Math.toRadians((ordemHarmonica*frequenciaAngular * i) + angulo2));
 	}
-
-	public double CalculaOndaDistorcida(int numeroHarmonicos) {
-		return amplitude * Math.cos(Math.toRadians((ordemHarmonica*frequenciaAngular * i) + angulo2));
-	}
-
 
 }

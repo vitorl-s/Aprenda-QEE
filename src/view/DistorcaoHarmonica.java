@@ -1,4 +1,4 @@
-package View;
+package view;
 
 
 import java.awt.GridLayout;
@@ -11,9 +11,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
 
-import Controller.ConversaoCompFundamental;
-import Controller.ConversaoHarmonicosDistHarm;
-import Controller.ConversaoNumeroHarmonicos;
+import controller.ConversaoCompFundamental;
+import controller.ConversaoHarmonicosDistHarm;
+import controller.ConversaoNumeroHarmonicos;
 
 import javax.swing.JComboBox;
 import javax.swing.JFrame;

@@ -1,4 +1,4 @@
-package Controller;
+package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
 
-import Model.CalculosDistHarm;
+import model.CalculosDistHarm;
 
 public class ConversaoNumeroHarmonicos implements ActionListener {
 
