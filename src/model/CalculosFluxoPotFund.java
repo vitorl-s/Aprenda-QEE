@@ -56,14 +56,5 @@ public class CalculosFluxoPotFund implements Calculos {
 			return 1;
 		}
 		return Math.cos(Math.toRadians(angulo-angulo2));
-	}
-
-	public double CalculaOndaHarmonica(double amplitudeTensao, int ordemHarmonica, double angulo) {
-		return 0;
-	}
-	
-	public double CalculaOndaDistorcida(int numeroHarmonicos) {
-		return 0;
-	}
-	
+	}	
 }

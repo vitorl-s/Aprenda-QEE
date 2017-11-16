@@ -387,57 +387,33 @@ public class DistorcaoHarmonica extends JFrame {
 		
 		JButton gerar4 = new JButton("Gerar");
 		gerar4.addActionListener(new ConversaoHarmonicosDistHarm(g5,scores5,ordem4,angulo4,amplitude4));
-		gerar4.setBounds(716, 166, 67, 23);
+		gerar4.setBounds(716, 191, 67, 23);
 		getContentPane().add(gerar4);
 		
 		JButton gerar5 = new JButton("Gerar");
 		gerar5.addActionListener(new ConversaoHarmonicosDistHarm(g6,scores6,ordem5,angulo5,amplitude5));
-		gerar5.setBounds(716, 275, 67, 23);
+		gerar5.setBounds(716, 298, 67, 23);
 		getContentPane().add(gerar5);
 		
 		JButton gerar6 = new JButton("Gerar");
 		gerar6.addActionListener(new ConversaoHarmonicosDistHarm(g7,scores7,ordem6,angulo6,amplitude6));
-		gerar6.setBounds(716, 393, 67, 23);
+		gerar6.setBounds(716, 404, 67, 23);
 		getContentPane().add(gerar6);
 		
 		JButton gerar1 = new JButton("Gerar");
 		gerar1.addActionListener(new ConversaoHarmonicosDistHarm(g2,scores2,ordem1,angulo1,amplitude1));
-		gerar1.setBounds(224, 166, 67, 23);
+		gerar1.setBounds(224, 191, 67, 23);
 		getContentPane().add(gerar1);
 		
 		JButton gerar2 = new JButton("Gerar");
 		gerar2.addActionListener(new ConversaoHarmonicosDistHarm(g3,scores3,ordem2,angulo2,amplitude2));
-		gerar2.setBounds(224, 275, 67, 23);
+		gerar2.setBounds(224, 298, 67, 23);
 		getContentPane().add(gerar2);
 		
 		JButton gerar3 = new JButton("Gerar");
 		gerar3.addActionListener(new ConversaoHarmonicosDistHarm(g4,scores4,ordem3,angulo3,amplitude3));
-		gerar3.setBounds(224, 393, 67, 23);
+		gerar3.setBounds(224, 404, 67, 23);
 		getContentPane().add(gerar3);
-		
-		JButton button_5 = new JButton("Ampliar");
-		button_5.setBounds(716, 200, 67, 23);
-		getContentPane().add(button_5);
-		
-		JButton button_6 = new JButton("Ampliar");
-		button_6.setBounds(716, 309, 67, 23);
-		getContentPane().add(button_6);
-		
-		JButton button_7 = new JButton("Ampliar");
-		button_7.setBounds(716, 427, 67, 23);
-		getContentPane().add(button_7);
-		
-		JButton button_8 = new JButton("Ampliar");
-		button_8.setBounds(224, 427, 67, 23);
-		getContentPane().add(button_8);
-		
-		JButton button_9 = new JButton("Ampliar");
-		button_9.setBounds(224, 309, 67, 23);
-		getContentPane().add(button_9);
-		
-		JButton button_10 = new JButton("Ampliar");
-		button_10.setBounds(224, 200, 67, 23);
-		getContentPane().add(button_10);
 		
 		JSpinner amplitude = new JSpinner();
 		amplitude.setBounds(704, 64, 39, 24);

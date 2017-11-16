@@ -7,7 +7,46 @@ import model.CalculosFluxoPotFund;
 public class TesteCalculoxFluxoPotFund {
 
 	CalculosFluxoPotFund calculos = new CalculosFluxoPotFund();
-	double valor_esperado,valor_calculado,amplitudeTensao,angulo,amplitudeCorrente,angulo2;
+	double valor_esperado,valor_calculado,amplitudeTensao,angulo,amplitudeCorrente,angulo2,t;
+
+	@Test
+	public void testaOndaTensao() {
+		amplitudeTensao = 220;
+		angulo = 30;
+		t= 0;
+			
+		valor_calculado = calculos.CalculaOndaAmplitudeTensao(amplitudeTensao, t, angulo);
+		valor_esperado = 190.5255;
+		
+		assertEquals(valor_esperado,valor_calculado,0.01);	
+	}
+	
+	@Test
+	public void testaOndaCorrente() {
+		amplitudeCorrente = 50;
+		angulo = 45;
+		t = 0;
+		valor_calculado = calculos.CalculaOndaCorrente(amplitudeCorrente, t, angulo);
+		valor_esperado = 26.266;
+		
+		assertEquals(valor_esperado,valor_calculado,0.01);	
+	}
+	
+
+	@Test
+	public void testaPotenciaInst() {
+		amplitudeTensao = 220;
+		angulo = 30;
+		amplitudeCorrente = 50;
+		angulo2 = 45;	
+		t = 0;
+		valor_calculado = calculos.CalculaPotInst(amplitudeTensao, t, angulo, amplitudeCorrente, angulo2);
+		valor_esperado = 5004.3427;
+		
+		assertEquals(valor_esperado,valor_calculado,0.03);	
+	}
+	
+	
 	
 	@Test
 	public void testaPotenciaAtiva() {
